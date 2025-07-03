@@ -1,4 +1,4 @@
-// Course content data
+// Course content data js file full
 const courseData = {
     dsa: {
   name: 'Data Structures & Algorithms',
