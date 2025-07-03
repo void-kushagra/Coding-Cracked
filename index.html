@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Cracked - Learn DSA, DBMS, OS & More</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <h1 class="nav-logo">Coding Cracked</h1>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="subjects-grid">
+      <div class="subject-box" data-subject="dsa">
+        <h2>DSA</h2>
+        <p>Data Structures & Algorithms</p>
+        <button class="start-btn" onclick="showLevels('dsa')">Start Learning</button>
+      </div>
+
+      <div class="subject-box" data-subject="dbms">
+        <h2>DBMS</h2>
+        <p>Database Management Systems</p>
+        <button class="start-btn" onclick="showLevels('dbms')">Start Learning</button>
+      </div>
+
+      <div class="subject-box" data-subject="os">
+        <h2>OS</h2>
+        <p>Operating Systems</p>
+        <button class="start-btn" onclick="showLevels('os')">Start Learning</button>
+      </div>
+
+      <div class="subject-box" data-subject="coding">
+        <h2>Coding</h2>
+        <p>Programming & Problem Solving</p>
+        <button class="start-btn" onclick="showLevels('coding')">Start Learning</button>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" id="levelsModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle"></h2>
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="levels-grid">
+          <div class="level-box" onclick="showTopics(1)">
+            <h3>Level 1</h3>
+            <p>Beginner Concepts</p>
+          </div>
+          <div class="level-box" onclick="showTopics(2)">
+            <h3>Level 2</h3>
+            <p>Intermediate Topics</p>
+          </div>
+          <div class="level-box" onclick="showTopics(3)">
+            <h3>Level 3</h3>
+            <p>Advanced Problems</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="topicsModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="topicsTitle"></h2>
+        <button class="close-btn" onclick="closeTopicsModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="topicsList" class="topics-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #4f46e5;
+    --accent: #8b5cf6;
+    --background: #f8fafc;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  
+  .navbar {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+    padding: 1rem 0;
+    box-shadow: var(--shadow);
+  }
+  
+  .nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .container {
+   
+    gap:20px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  
+  .subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Exactly 2 columns */
+    gap: 2rem;
+    max-width: 800px; /* Optional: centers and limits total width */
+    margin: auto;
+  }
+  .subject-box {
+   
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .subject-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subject-box h2 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+  }
+  
+  .subject-box p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+  }
+  
+  .start-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .start-btn:hover {
+    background: var(--primary-dark);
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+ 
+  .modal-content {
+    background: white;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  
+  .modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-header h2 {
+    color: var(--text);
+    font-size: 1.5rem;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-light);
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .close-btn:hover {
+    color: var(--text);
+  }
+  
+  .modal-body {
+    padding: 1.5rem;
+  }
+  
+  .levels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .level-box {
+    background: var(--background);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .level-box:hover {
+    transform: translateY(-3px);
+    background: white;
+    box-shadow: var(--shadow);
+  }
+  
+  .level-box h3 {
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .level-box p {
+    color: var(--text-light);
+    font-size: 0.875rem;
+  }
+  
+  .topics-list {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .topic-item {
+    background: var(--background);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .topic-title {
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  .topic-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .topic-link {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+  }
+  
+  .video-link {
+    background: var(--accent);
+    color: white;
+  }
+  
+  .video-link:hover {
+    background: #7c3aed;
+  }
+  
+  .practice-link {
+    background: var(--primary);
+    color: white;
+  }
+  
+  .practice-link:hover {
+    background: var(--primary-dark);
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+    }
+    
+    .subjects-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+      width: 95%;
+      margin: 1rem;
+    }
+    
+    .levels-grid {
+      grid-template-columns: 1fr;
+    }
+  }
